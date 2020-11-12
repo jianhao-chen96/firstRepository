@@ -1,0 +1,8 @@
+﻿  main.cpp
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(165): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(166): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(171): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(172): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(174): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\opengl work\openglexercise01\openglexercise01\main.cpp(175): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  OpenGLExercise01.vcxproj -> E:\opengl work\OpenGLExercise01\Debug\OpenGLExercise01.exe
