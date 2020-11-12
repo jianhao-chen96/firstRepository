@@ -253,26 +253,26 @@ int main(int argc, char* argv[])
 
 	#pragma region Init and Load Models to VAO, VBO
 		//Mesh cube(vertices);
-		Model model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\nanosuit.obj");
-		//unsigned int VAO;
-		//glGenVertexArrays(1, &VAO);
-		//glBindVertexArray(VAO);
-		//
-		//unsigned int VBO;
-		//glGenBuffers(1, &VBO);
-		//glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		//glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		//
-		//
-		////位置属性
-		//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-		//glEnableVertexAttribArray(0);
-		////颜色属性
-		//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-		//glEnableVertexAttribArray(1);
-		//// texture coord attribute 纹理坐标属性
-		//glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-		//glEnableVertexAttribArray(2);
+		//Model model(exePath.substr(0, exePath.find_last_of('\\')) + "\\model\\nanosuit.obj");
+		unsigned int VAO;
+		glGenVertexArrays(1, &VAO);
+		glBindVertexArray(VAO);
+		
+		unsigned int VBO;
+		glGenBuffers(1, &VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+		
+		
+		//位置属性
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+		glEnableVertexAttribArray(0);
+		//颜色属性
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+		glEnableVertexAttribArray(1);
+		// texture coord attribute 纹理坐标属性
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+		glEnableVertexAttribArray(2);
 		//glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 		//glEnableVertexAttribArray(3);
 	#pragma endregion
@@ -377,12 +377,12 @@ int main(int argc, char* argv[])
 			myMaterial->shader->SetUniform1f("material.shininess", myMaterial->shininess);
 
 			// Set Model
-			//glBindVertexArray(VAO);
+			glBindVertexArray(VAO);
 			
 			// Drawcall
-			//glDrawArrays(GL_TRIANGLES, 0, 36);
+			glDrawArrays(GL_TRIANGLES, 0, 36);
 			//cube.Draw(myMaterial->shader);
-			model.Draw(myMaterial->shader);
+			//model.Draw(myMaterial->shader);
 		}
 
 		// clean up, prepare for next render loop
